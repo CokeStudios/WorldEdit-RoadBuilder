@@ -25,7 +25,7 @@ var search_line = function (origin, distance) {
     for (var i = 0; i < distance; i++) {
         lines.push(origin);
         lines_string.push(String(origin));
-        player.print(dx + "," + dz);
+        // player.print(dx + "," + dz);
         var left = BlockVector3.at(dz, 0, -dx);
         var right = BlockVector3.at(-dz, 0, dx);
         var straight = BlockVector3.at(dx, 0, dz);
@@ -74,3 +74,4 @@ var distance = (Math.min(argv[3], 2000) || 2000);
 var lines = search_line(player.getBlockOn().toVector().toBlockPoint(), distance);
 // for (var i in lines)
 //     blocks.setBlock(lines[i], context.getBlock(String(blocks.getBlock(lines[i])).split("[")[0] + "[facing=west]"));
+player.print("路径总长"+lines.length+"个方块");
