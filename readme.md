@@ -1,7 +1,7 @@
 # RoadBuilder
 一个用于Minecraft插件World Edit的craftscript脚本，包含一些曲线道路的生成器与辅助脚本。
 ## 安装
-请将这些*.js脚本文件放置在WorldEdit插件的craftscripts文件夹下（可以只复制您需要的脚本，脚本之间互不影响）。
+请将roadbuilder文件夹内的*.js脚本文件放置在WorldEdit插件的craftscripts文件夹下（可以只复制您需要的脚本，脚本之间互不影响）。
 如果找不到WorldEdit插件安装位置，可以随便输入`/cs xxx`运行一个脚本，WE会告诉你在某个目录下找不到xxx.js文件从而获得目录位置。
 ## 术语介绍
 - 含拐角曲线：曲线上的每个拐角均通过直角邻边连接；
