@@ -70,7 +70,7 @@ var search_line = function (origin, distance) {
     }
     return lines;
 }
-var distance = (Math.min(argv[3], 400) || 400);
+var distance = (Math.min(argv[3], 2000) || 2000);
 var lines = search_line(player.getBlockOn().toVector().toBlockPoint(), distance);
 // for (var i in lines)
 //     blocks.setBlock(lines[i], context.getBlock(String(blocks.getBlock(lines[i])).split("[")[0] + "[facing=west]"));
