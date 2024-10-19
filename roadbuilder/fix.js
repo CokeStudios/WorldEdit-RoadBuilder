@@ -140,7 +140,7 @@ var search_line = function (origin, isLeft, distance) {
     }
     return lines;
 }
-var distance = (Math.min(argv[2], 400) || 400);
+var distance = (Math.min(argv[2], 2000) || 2000);
 var isLeft = argv[1];
 var lines = search_line(player.getBlockOn().toVector().toBlockPoint(), isLeft, distance);
 player.print("路径总长"+lines.length+"个方块");
