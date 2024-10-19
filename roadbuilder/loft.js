@@ -332,7 +332,7 @@ var road_type = {
 };
 
 var config = {
-    max_distance: 1000,
+    max_distance: 3500,
     max_width: 120,
 };
 
