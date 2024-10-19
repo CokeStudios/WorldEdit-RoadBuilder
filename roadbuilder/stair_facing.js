@@ -71,7 +71,12 @@ var search_line = function (origin, distance) {
     return lines;
 }
 var distance = (Math.min(argv[3], 2000) || 2000);
-var lines = search_line(player.getBlockOn().toVector().toBlockPoint(), distance);
-// for (var i in lines)
-//     blocks.setBlock(lines[i], context.getBlock(String(blocks.getBlock(lines[i])).split("[")[0] + "[facing=west]"));
-player.print("路径总长"+lines.length+"个方块");
+var block_facing = player.getBlockTrace()
+if (block_facing == null) {
+    player.print("没有指向一个实体方块！检测距离为5格。");
+} else {
+    var lines = search_line(block_facing.toVector().toBlockPoint(), distance);
+    // for (var i in lines)
+    //     blocks.setBlock(lines[i], context.getBlock(String(blocks.getBlock(lines[i])).split("[")[0] + "[facing=west]"));
+    player.print("路径总长"+lines.length+"个方块");
+}
